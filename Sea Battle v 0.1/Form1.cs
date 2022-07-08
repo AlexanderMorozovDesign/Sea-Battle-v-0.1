@@ -48,6 +48,7 @@ namespace Sea_Battle_v_0._1
                     Button button = new Button();
                     button.Location = new Point(j * cellSize, i * cellSize);
                     button.Size = new Size(cellSize, cellSize);
+                    
                     if (j == 0 || i == 0)
                     {
                         button.BackColor = Color.Gray;
@@ -60,6 +61,10 @@ namespace Sea_Battle_v_0._1
                             button.Text = i.ToString();
                         }
 
+                    }
+                    else
+                    {
+                        button.Click += new EventHandler(ConfigureShips);
                     }
 
                     this.Controls.Add(button);
@@ -99,7 +104,7 @@ namespace Sea_Battle_v_0._1
             this.Controls.Add(map1);
 
             Label map2 = new Label();
-            map2.Text = "КартаПротивника";
+            map2.Text = "Карта Противника";
             map2.Location = new Point(250+mapSize * cellSize / 2, mapSize * cellSize + 10);
             this.Controls.Add(map2);
 
@@ -115,6 +120,16 @@ namespace Sea_Battle_v_0._1
             isPlaying = true;
         }
 
-        // 7 02 min
+        public void ConfigureShips(object sender, EventArgs e)
+        {
+            Button pressedButton = sender as Button;
+            if (!isPlaying)
+            {
+                pressedButton.BackColor = Color.Red;
+
+            }
+        }
+
+         // 7 42
     }
 }
