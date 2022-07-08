@@ -114,5 +114,7 @@ namespace Sea_Battle_v_0._1
         {
             isPlaying = true;
         }
+
+        // 7 02 min
     }
 }
