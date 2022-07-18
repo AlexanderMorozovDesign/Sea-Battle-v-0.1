@@ -29,7 +29,7 @@ namespace Sea_Battle_v_0._1
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Морской бой";
+            this.Text = "Classic Sea Battle";
             Init();
         }
 
@@ -99,12 +99,12 @@ namespace Sea_Battle_v_0._1
                 }
             }
             Label map1 = new Label();
-            map1.Text = "Карта игрока";
+            map1.Text = "Player Map";
             map1.Location = new Point(mapSize * cellSize / 2, mapSize * cellSize + 10);
             this.Controls.Add(map1);
 
             Label map2 = new Label();
-            map2.Text = "Карта противника";
+            map2.Text = "Enemy Map";
             map2.Location = new Point(350 + mapSize * cellSize / 2, mapSize * cellSize + 10);
             this.Controls.Add(map2);
 
