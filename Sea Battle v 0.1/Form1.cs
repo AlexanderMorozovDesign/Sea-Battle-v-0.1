@@ -109,7 +109,7 @@ namespace Sea_Battle_v_0._1
             this.Controls.Add(map2);
 
             Button startButton = new Button();
-            startButton.Text = "Начать";
+            startButton.Text = "Start Game";
             startButton.Click += new EventHandler(Start);
             startButton.Location = new Point(0, mapSize * cellSize + 20);
             this.Controls.Add(startButton);
